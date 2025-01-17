@@ -25,7 +25,7 @@ function App() {
         <div className="absolute inset-0 overflow-hidden z-0">
           <video
             className="w-full h-full object-cover"
-            src="public/assets/video/showreelr.mp4" // Replace with the actual path to your video file
+            src="assets/video/showreelr.mp4" // Replace with the actual path to your video file
             autoPlay
             loop
             
@@ -50,27 +50,27 @@ function App() {
               {
                 title: "POTTEL",
                 role: "Director of Photography",
-                image: "public/assets/Images/pottel_movie_poster.png"
+                image: "assets/Images/pottel_movie_poster.png"
               },
               {
                 title: "AAY",
                 role: "Assistant Cinematographer",
-                image: "public/assets/Images/aay_movie_poster.jpg",
+                image: "assets/Images/aay_movie_poster.jpg",
               },
               {
                 title: "MAA NAANA SUPER HERO",
                 role: "Assistant Cinematographer",
-                image: "public/assets/Images/ma_naana_superhero_poster.jpg",
+                image: "assets/Images/ma_naana_superhero_poster.jpg",
               },
               {
                 title: "Movie Title 4",
                 role: "Camera Operator",
-                image: "public/assets/Images/Vyuham_film_poster.jpg",
+                image: "assets/Images/Vyuham_film_poster.jpg",
               },
               {
                 title: "Yathbhava",
                 role: "Director of Photography",
-                image: "public/assets/Images/Yathbhava.JPG"
+                image: "assets/Images/Yathbhava.JPG"
               }
             ].map((item, index) => (
               <div key={index} className="group relative">
@@ -145,22 +145,22 @@ function App() {
               {
                 title: "Kittu Katha",
                 description: "Graduation Film",
-                image: "public/assets/Images/Kittu_Katha.png.png",
+                image: "assets/Images/Kittu_Katha.png.png",
               },
               {
                 title: "Swecha",
                 description: "Academic Work",
-                image: "public/assets/Images/Swechapot.jpg",
+                image: "assets/Images/Swechapot.jpg",
               },
               {
                 title: "Jaabu",
                 description: "Short Film",
-                image: "public/assets/Images/Jaabu.PNG"
+                image: "assets/Images/Jaabu.PNG"
               },
               {
                 title: "Nails",
                 description: "Short Film",
-                image: "public/assets/Images/Nails.png",
+                image: "assets/Images/Nails.png",
               }
             ].map((item, index) => (
               <div key={index} className="aspect-[4/5] bg-gray-800 rounded-lg overflow-hidden group relative">
@@ -184,13 +184,13 @@ function App() {
         <div className="container mx-auto px-0">
           <h2 className="text-4xl font-bold text-center mb-16">Brands Worked With</h2>
           <div className="grid grid-cols-2 md:grid-cols-7 gap-8 items-center">
-            {["public/assets/Logos/Tata_Curve.png", 
-            "public/assets/Logos/Annapurna_studios.JPG",
-            "public/assets/Logos/Annapurna_college_of_film_&_Media.jpg",
-            "public/assets/Logos/KTM.PNG", 
-            "public/assets/Logos/Hero.PNG", 
-             "public/assets/Logos/Power_Drift.png", 
-             "public/assets/Logos/Ather.JPG",
+            {["assets/Logos/Tata_Curve.png", 
+            "assets/Logos/Annapurna_studios.JPG",
+            "assets/Logos/Annapurna_college_of_film_&_Media.jpg",
+            "assets/Logos/KTM.PNG", 
+            "assets/Logos/Hero.PNG", 
+             "assets/Logos/Power_Drift.png", 
+             "assets/Logos/Ather.JPG",
             ].map((src, index) => (
               <div key={index} className="w-full h-30 p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
                 <img
