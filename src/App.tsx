@@ -5,17 +5,17 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
-      <header className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-50">
+      <header className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-30">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div> <h1 className="text-4xl font-bold">Nithin Potharaju</h1>
             <h2 className="text-2xl font-semibold text-gray-700">Cinematographer & Colorist</h2> </div>
           <nav className="hidden md:flex space-x-8">
             <a href="#home" className="hover:text-red-500 transition">Home</a>
             <a href="#portfolio" className="hover:text-red-500 transition">Bio</a>
-            <a href="#services" className="hover:text-red-500 transition">Films</a>
-            <a href="#news" className="hover:text-red-500 transition">Brands</a>
+            <a href="#Films" className="hover:text-red-500 transition">Films</a>
+            <a href="#Brands" className="hover:text-red-500 transition">Brands</a>
             <a href="#gallery" className="hover:text-red-500 transition">Gallery</a>
-            <a href="#contact" className="hover:text-red-500 transition">Contact Us</a>
+            <a href="#ContactUs" className="hover:text-red-500 transition">Contact Us</a>
           </nav>
         </div>
       </header>
@@ -25,10 +25,10 @@ function App() {
         <div className="absolute inset-0 overflow-hidden z-0">
           <video
             className="w-full h-full object-cover"
-            src="video/showreelr.mp4" // Replace with the actual path to your video file
+            src="public/assets/video/showreelr.mp4" // Replace with the actual path to your video file
             autoPlay
             loop
-            muted
+            
           ></video>
           <div className="absolute inset-0 bg-black opacity-50"></div> {/* Optional overlay to darken the video */}
         </div>
@@ -40,37 +40,37 @@ function App() {
       </section>
 
       {/* Main Stream Movies Section */}
-      <section className="py-20 bg-[#1a1d24]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-8">Movies</h2>
+      <section id="Films" className="py-20 bg-[#1a1d24]">
+        <div  className="container mx-auto px-4">
+          <h2  className="text-4xl font-bold mb-8">Movies</h2>
           <p className="text-gray-400 mb-12">Feature Films & Major Productions</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {[
               {
                 title: "POTTEL",
                 role: "Director of Photography",
-                image: "Images/pottel_movie_poster.png"
+                image: "public/assets/Images/pottel_movie_poster.png"
               },
               {
                 title: "AAY",
                 role: "Assistant Cinematographer",
-                image: "Images/aay_movie_poster.jpg",
+                image: "public/assets/Images/aay_movie_poster.jpg",
               },
               {
                 title: "MAA NAANA SUPER HERO",
                 role: "Assistant Cinematographer",
-                image: "Images/ma_naana_superhero_poster.jpg",
+                image: "public/assets/Images/ma_naana_superhero_poster.jpg",
               },
               {
                 title: "Movie Title 4",
                 role: "Camera Operator",
-                image: "Images/Vyuham_film_poster.jpg",
+                image: "public/assets/Images/Vyuham_film_poster.jpg",
               },
               {
                 title: "Yathbhava",
                 role: "Director of Photography",
-                image: "Images/Yathbhava.JPG"
+                image: "public/assets/Images/Yathbhava.JPG"
               }
             ].map((item, index) => (
               <div key={index} className="group relative">
@@ -145,22 +145,22 @@ function App() {
               {
                 title: "Kittu Katha",
                 description: "Graduation Film",
-                image: "Images/Kittu_Katha.png.png",
+                image: "public/assets/Images/Kittu_Katha.png.png",
               },
               {
                 title: "Swecha",
                 description: "Academic Work",
-                image: "Images/Swechapot.jpg",
+                image: "public/assets/Images/Swechapot.jpg",
               },
               {
                 title: "Jaabu",
                 description: "Short Film",
-                image: "Images/Jaabu.PNG"
+                image: "public/assets/Images/Jaabu.PNG"
               },
               {
                 title: "Nails",
                 description: "Short Film",
-                image: "Images/Nails.png",
+                image: "public/assets/Images/Nails.png",
               }
             ].map((item, index) => (
               <div key={index} className="aspect-[4/5] bg-gray-800 rounded-lg overflow-hidden group relative">
@@ -180,16 +180,23 @@ function App() {
       </section>
 
       {/* Brand Logos Section */}
-      <section className="py-20">
+      <section  id="Brands" className="py-20">
         <div className="container mx-auto px-0">
           <h2 className="text-4xl font-bold text-center mb-16">Brands Worked With</h2>
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
-            {["Logos/Tata_Curve.png", "Logos/IMG_3978.JPG", 3, 4, 5, 6].map((src, index) => (
-              <div key={index} className="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
+          <div className="grid grid-cols-2 md:grid-cols-7 gap-8 items-center">
+            {["public/assets/Logos/Tata_Curve.png", 
+            "public/assets/Logos/Annapurna_studios.JPG",
+            "public/assets/Logos/Annapurna_college_of_film_&_Media.jpg",
+            "public/assets/Logos/KTM.PNG", 
+            "public/assets/Logos/Hero.PNG", 
+             "public/assets/Logos/Power_Drift.png", 
+             "public/assets/Logos/Ather.JPG",
+            ].map((src, index) => (
+              <div key={index} className="w-full h-30 p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
                 <img
-                  src={""}
+                  src={src}
                   alt={`Brand ${index}`}
-                  className="w-full h-20 object-contain filter invert" // Updated height
+                  className="w-full h-23 object-cover " // Updated height
                 />
               </div>
             ))}
@@ -243,7 +250,7 @@ function App() {
                   Subscribe
                 </button>
               </div>
-              <div className="flex space-x-4 mt-6">
+              <div   id="ContactUs" className="flex space-x-4 mt-6">
                 <a href="www.instagram.com" className="text-gray-400 hover:text-red-500">
                   <Instagram className="w-6 h-6" />
                 </a>
