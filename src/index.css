@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html {
   scroll-behavior: smooth;
 }
@@ -19,3 +20,25 @@ body {
 .carousel-slide.active {
   opacity: 1;
 }
+
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+  }
+  #home {
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav {
+    align-items: center;
+  }
+  #home {
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+  }
+}
+

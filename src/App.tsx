@@ -6,16 +6,18 @@ function App() {
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
       <header className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-30">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div> <h1 className="text-4xl font-bold">Nithin Potharaju</h1>
-            <h2 className="text-2xl font-semibold text-gray-700">Cinematographer & Colorist</h2> </div>
-          <nav className="hidden md:flex space-x-8">
+        <div className="flex flex-row md:flex-row justify-between items-center py-4 bg-gray-800 text-white px-6">
+          <div className="text-center md:text-left">
+            <h1 className="text-4xl font-bold">Nithin Potharaju</h1>
+            <h2 className="text-2xl font-semibold text-gray-400">Cinematographer & Colorist</h2>
+          </div>
+          <nav className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-8 mt-4 md:mt-0">
             <a href="#home" className="hover:text-red-500 transition">Home</a>
             <a href="#portfolio" className="hover:text-red-500 transition">Bio</a>
             <a href="#Films" className="hover:text-red-500 transition">Films</a>
             <a href="#Brands" className="hover:text-red-500 transition">Brands</a>
             <a href="#gallery" className="hover:text-red-500 transition">Gallery</a>
-            <a href="#ContactUs" className="hover:text-red-500 transition">Contact Us</a>
+            <a href="#ContactUS" className="hover:text-red-500 transition">Contact Us</a>
           </nav>
         </div>
       </header>
@@ -25,15 +27,22 @@ function App() {
         <div className="absolute inset-0 overflow-hidden z-0">
           <video
             className="w-full h-full object-cover"
-            src="/assets/video/ShowreelM.mov" // Replace with the actual path to your video file
+            src="assets/video/ShowreelM.mp4" // Replace with the actual path to your video file
             autoPlay
             loop
-            
+
           ></video>
+
+          {/*<video className="w-full h-full object-cover" autoPlay loop muted>
+            <source src="assets/video/ShowreelM_1080p.mp4" type="video/mp4" media="(min-width: 1024px)" />
+            <source src="assets/video/ShowreelM_720p.mp4" type="video/mp4" media="(min-width: 768px)" />
+            <source src="assets/video/ShowreelM_480p.mp4" type="video/mp4" />
+            
+          </video>*/}
           <div className="absolute inset-0 bg-black opacity-30"></div> {/* Optional overlay to darken the video */}
         </div>
-        <div className="relative container mx-auto z-10">
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-0">
+        <div className="relative container mx-auto z-10 text-center md:text-left">
+          <div className="grid grid-cols-1 gap-4">
             {/* Add any other content here */}
           </div>
         </div>
@@ -41,8 +50,8 @@ function App() {
 
       {/* Main Stream Movies Section */}
       <section id="Films" className="py-20 bg-[#1a1d24]">
-        <div  className="container mx-auto px-4">
-          <h2  className="text-4xl font-bold mb-8">Movies</h2>
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-8">Movies</h2>
           <p className="text-gray-400 mb-12">Feature Films & Major Productions</p>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -180,7 +189,7 @@ function App() {
       </section>
 
       {/* Brand Logos Section */}
-      <section  id="Brands" className="py-20">
+      <section id="Brands" className="py-20">
         <div className="container mx-auto px-0">
           <h2 className="text-4xl font-bold text-center mb-16">Brands Worked With</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
@@ -189,8 +198,8 @@ function App() {
               "/assets/Logos/GA2.jpg",
               "/assets/Logos/UV.jpg",
               "assets/Logos/Power_Drift.PNG",
-              "assets/Logos/ktm.jpg", 
-              "assets/Logos/Hero.jpg", 
+              "assets/Logos/ktm.jpg",
+              "assets/Logos/Hero.jpg",
               "assets/Logos/Tata_Curve.PNG",
               "assets/Logos/Ather.JPG",
               "/assets/Logos/amazon-prime.avif",
@@ -254,7 +263,7 @@ function App() {
                   Subscribe
                 </button>
               </div>
-              <div   id="ContactUs" className="flex space-x-4 mt-6">
+              <div id="ContactUs" className="flex space-x-4 mt-6">
                 <a href="www.instagram.com" className="text-gray-400 hover:text-red-500">
                   <Instagram className="w-6 h-6" />
                 </a>
