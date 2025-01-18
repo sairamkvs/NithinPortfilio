@@ -6,7 +6,7 @@ function App() {
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
       <header className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-30">
-        <div className="flex flex-col md:flex-row justify-between items-center py-2 md:py-4 bg-gray-800 text-white px-4 md:px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center py-2 md:py-2 bg-gray-800 text-white px-4 md:px-2">
           <div className="text-center md:text-left">
             <h1 className="text-4xl font-bold">Nithin Potharaju</h1>
             <h2 className="text-2xl font-semibold text-gray-400">Cinematographer & Colorist</h2>
