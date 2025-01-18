@@ -34,7 +34,7 @@ body {
 
 @media (max-width: 480px) {
   header nav {
-    align-items: center;
+    align-items:bottom;
   }
   #home {
     padding-top: 8rem;

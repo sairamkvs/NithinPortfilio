@@ -6,12 +6,12 @@ function App() {
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
       <header className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-30">
-        <div className="flex flex-row md:flex-row justify-between items-center py-4 bg-gray-800 text-white px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center py-2 md:py-4 bg-gray-800 text-white px-4 md:px-6">
           <div className="text-center md:text-left">
             <h1 className="text-4xl font-bold">Nithin Potharaju</h1>
             <h2 className="text-2xl font-semibold text-gray-400">Cinematographer & Colorist</h2>
           </div>
-          <nav className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-8 mt-4 md:mt-0">
+          <nav className="flex flex-row space-x-4 md:space-x-8 mt-4 md:mt-0 justify-center md:justify-end">
             <a href="#home" className="hover:text-red-500 transition">Home</a>
             <a href="#portfolio" className="hover:text-red-500 transition">Bio</a>
             <a href="#Films" className="hover:text-red-500 transition">Films</a>
@@ -27,10 +27,10 @@ function App() {
         <div className="absolute inset-0 overflow-hidden z-0">
           <video
             className="w-full h-full object-cover"
-            src="assets/video/ShowreelM.mp4" // Replace with the actual path to your video file
+            src="assets/video/Showreel.mp4" // Replace with the actual path to your video file
             autoPlay
             loop
-
+            muted
           ></video>
 
           {/*<video className="w-full h-full object-cover" autoPlay loop muted>
@@ -40,11 +40,6 @@ function App() {
             
           </video>*/}
           <div className="absolute inset-0 bg-black opacity-30"></div> {/* Optional overlay to darken the video */}
-        </div>
-        <div className="relative container mx-auto z-10 text-center md:text-left">
-          <div className="grid grid-cols-1 gap-4">
-            {/* Add any other content here */}
-          </div>
         </div>
       </section>
 
@@ -192,7 +187,7 @@ function App() {
       <section id="Brands" className="py-20">
         <div className="container mx-auto px-0">
           <h2 className="text-4xl font-bold text-center mb-16">Brands Worked With</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
             {["assets/Logos/Annapurna_college_of_film_&_Media.JPG",
               "/assets/Logos/Annapurna_studios.JPG",
               "/assets/Logos/GA2.jpg",
