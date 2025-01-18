@@ -25,12 +25,12 @@ function App() {
         <div className="absolute inset-0 overflow-hidden z-0">
           <video
             className="w-full h-full object-cover"
-            src="assets/video/showreelr.mp4" // Replace with the actual path to your video file
+            src="/assets/video/ShowreelM.mov" // Replace with the actual path to your video file
             autoPlay
             loop
             
           ></video>
-          <div className="absolute inset-0 bg-black opacity-50"></div> {/* Optional overlay to darken the video */}
+          <div className="absolute inset-0 bg-black opacity-30"></div> {/* Optional overlay to darken the video */}
         </div>
         <div className="relative container mx-auto z-10">
           <div className="grid grid-cols-1 md:grid-cols-1 gap-0">
@@ -145,12 +145,12 @@ function App() {
               {
                 title: "Kittu Katha",
                 description: "Graduation Film",
-                image: "assets/Images/Kittu_Katha.png.png",
+                image: "assets/Images/Kittu_Katha.png.PNG",
               },
               {
                 title: "Swecha",
                 description: "Academic Work",
-                image: "assets/Images/Swechapot.jpg",
+                image: "assets/Images/Swechapot.JPG",
               },
               {
                 title: "Jaabu",
@@ -160,7 +160,7 @@ function App() {
               {
                 title: "Nails",
                 description: "Short Film",
-                image: "assets/Images/Nails.png",
+                image: "assets/Images/Nails.PNG",
               }
             ].map((item, index) => (
               <div key={index} className="aspect-[4/5] bg-gray-800 rounded-lg overflow-hidden group relative">
@@ -183,14 +183,18 @@ function App() {
       <section  id="Brands" className="py-20">
         <div className="container mx-auto px-0">
           <h2 className="text-4xl font-bold text-center mb-16">Brands Worked With</h2>
-          <div className="grid grid-cols-2 md:grid-cols-7 gap-8 items-center">
-            {["assets/Logos/Tata_Curve.png", 
-            "assets/Logos/Annapurna_studios.JPG",
-            "assets/Logos/Annapurna_college_of_film_&_Media.jpg",
-            "assets/Logos/KTM.PNG", 
-            "assets/Logos/Hero.PNG", 
-             "assets/Logos/Power_Drift.png", 
-             "assets/Logos/Ather.JPG",
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+            {["assets/Logos/Annapurna_college_of_film_&_Media.JPG",
+              "/assets/Logos/Annapurna_studios.JPG",
+              "/assets/Logos/GA2.jpg",
+              "/assets/Logos/UV.jpg",
+              "assets/Logos/Power_Drift.PNG",
+              "assets/Logos/ktm.jpg", 
+              "assets/Logos/Hero.jpg", 
+              "assets/Logos/Tata_Curve.PNG",
+              "assets/Logos/Ather.JPG",
+              "/assets/Logos/amazon-prime.avif",
+              "/assets/Logos/aha.png",
             ].map((src, index) => (
               <div key={index} className="w-full h-30 p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
                 <img
