@@ -23,21 +23,19 @@ function App() {
       </header>
 
       {/* Hero Section with Carousel */}
-      <section id="home" className="relative min-h-screen pt-24 pb-20 px-4">
+      <section id="home" className="relative min-h-screen pt-24 pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden z-0">
           <video
-            className="w-full h-full object-cover"
+            className="absolute w-full h-full object-fit cover"
             src="assets/video/Showreel.mp4" // Replace with the actual path to your video file
             autoPlay
             loop
             muted
           ></video>
-
           {/*<video className="w-full h-full object-cover" autoPlay loop muted>
             <source src="assets/video/ShowreelM_1080p.mp4" type="video/mp4" media="(min-width: 1024px)" />
             <source src="assets/video/ShowreelM_720p.mp4" type="video/mp4" media="(min-width: 768px)" />
             <source src="assets/video/ShowreelM_480p.mp4" type="video/mp4" />
-            
           </video>*/}
           <div className="absolute inset-0 bg-black opacity-30"></div> {/* Optional overlay to darken the video */}
         </div>
@@ -143,7 +141,7 @@ function App() {
       {/* Short Films Section */}
       <section className="py-20 bg-[#1a1d24]">
         <div className="container mx-auto px-5">
-          <h2 className="text-4x1 font-bold mb-16">Short Films</h2>
+          <h2 className="text-4x1 font-bold mb-20">Short Films</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
