@@ -42,3 +42,19 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  h1 {
+    font-size: 1.75rem; /* Adjust heading size */
+  }
+  h2 {
+    font-size: 1.25rem; /* Adjust subheading size */
+  }
+  nav {
+    margin-top: 0.5rem;
+  }
+}
+

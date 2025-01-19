@@ -6,18 +6,18 @@ function App() {
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
       <header className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-30">
-        <div className="flex flex-col md:flex-row justify-between items-center py-2 md:py-2 bg-gray-800 text-white px-4 md:px-2">
-          <div className="text-center md:text-left">
-            <h1 className="text-4xl font-bold">Nithin Potharaju</h1>
-            <h2 className="text-2xl font-semibold text-gray-400">Cinematographer & Colorist</h2>
+        <div className="flex flex-col md:flex-row justify-between items-center py-2 md:py-2 bg-gray-800 text-white px-4 md:px-6">
+          <div className="text-center md:text-left mb-2 md:mb-0">
+            <h1 className="text-2xl md:text-3xl font-bold">Nithin Potharaju</h1>
+            <h2 className="text-lg md:text-1xl font-semibold text-gray-400">Cinematographer & Colorist</h2>
           </div>
-          <nav className="flex flex-row space-x-4 md:space-x-8 mt-4 md:mt-0 justify-center md:justify-end">
+          <nav className="flex flex-row space-x-2 md:space-x-8 mt-4 md:mt-0 justify-center md:justify-end">
             <a href="#home" className="hover:text-red-500 transition">Home</a>
             <a href="#portfolio" className="hover:text-red-500 transition">Bio</a>
             <a href="#Films" className="hover:text-red-500 transition">Films</a>
             <a href="#Brands" className="hover:text-red-500 transition">Brands</a>
             <a href="#gallery" className="hover:text-red-500 transition">Gallery</a>
-            <a href="#ContactUS" className="hover:text-red-500 transition">Contact Us</a>
+            <a href="#ContactUS" className="hover:text-red-500 transition">ContactUs</a>
           </nav>
         </div>
       </header>
@@ -141,7 +141,7 @@ function App() {
       {/* Short Films Section */}
       <section className="py-20 bg-[#1a1d24]">
         <div className="container mx-auto px-5">
-          <h2 className="text-4x1 font-bold mb-20">Short Films</h2>
+          <h2 className="text-4xl font-bold mb-16">Short Films</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
@@ -245,7 +245,7 @@ function App() {
 
             {/* Newsletter */}
             <div>
-              <h4 className="text-lg font-bold mb-4">Newsletter</h4>
+              {/*<h4 className="text-lg font-bold mb-4">Newsletter</h4>
               <div className="flex">
                 <input
                   type="email"
@@ -255,8 +255,9 @@ function App() {
                 <button className="bg-red-500 px-4 py-2 rounded-r-lg hover:bg-red-600">
                   Subscribe
                 </button>
-              </div>
-              <div id="ContactUs" className="flex space-x-4 mt-6">
+              </div>*/}
+              <h5 className="text-lg font-bold mb-2">Instagram</h5>
+              <div className="flex space-x-4 mt-6">
                 <a href="www.instagram.com" className="text-gray-400 hover:text-red-500">
                   <Instagram className="w-6 h-6" />
                 </a>
