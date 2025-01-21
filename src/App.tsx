@@ -1,11 +1,12 @@
 import React from 'react';
 import { Camera, Play, Film, Mail, Instagram, Linkedin } from 'lucide-react';
 
+
 function App() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
-      <header className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-30">
+      <header className="fixed top-0 w-full bg-gray-900/95 z-30">
         <div className="flex flex-col md:flex-row justify-between items-center py-2 md:py-2 bg-gray-800 text-white px-4 md:px-6">
           <div className="text-center md:text-left mb-2 md:mb-0">
             <h1 className="text-2xl md:text-3xl font-bold">Nithin Potharaju</h1>
@@ -41,6 +42,29 @@ function App() {
         </div>
       </section>
 
+      {/* Bio Section */}
+      <section id="bio" className="py-20 bg-[#1a1d24] text-center md:text-left">
+        <div className="container mx-auto px-4 md:flex md:items-center">
+          <div className="md:w-1/2">
+            <img
+              src="assets/Images/Nithin_Picture.png" // Replace with the actual path to your image
+              alt="Nithin Potharaju"
+              className="w-full h-auto rounded-lg mb-8 md:mb-0"
+            />
+          </div>
+          <div className="md:w-1/2 md:pl-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">BIO</h2>
+            <p className="text-gray-400">
+              I’m a freelance Cinematographer & Colourist
+              passionate about film & art. I’m a hands-on
+              professional, able to manage multiple clients,
+              projects, and tasks at the same time, and meet
+              aggressive deadlines.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Main Stream Movies Section */}
       <section id="Films" className="py-20 bg-[#1a1d24]">
         <div className="container mx-auto px-4">
@@ -51,7 +75,7 @@ function App() {
             {[
               {
                 title: "POTTEL",
-                role: "Director of Photography",
+                role: "Assistant Cinematographer",
                 image: "assets/Images/pottel_movie_poster.png"
               },
               {
@@ -66,12 +90,12 @@ function App() {
               },
               {
                 title: "Movie Title 4",
-                role: "Camera Operator",
+                role: "Associate Cinematographer",
                 image: "assets/Images/Vyuham_film_poster.jpg",
               },
               {
                 title: "Yathbhava",
-                role: "Director of Photography",
+                role: "2nd Unit Cinematographer ",
                 image: "assets/Images/Yathbhava.JPG"
               }
             ].map((item, index) => (
@@ -93,7 +117,7 @@ function App() {
         </div>
       </section>
 
-      {/* Commercials Section */}
+      {/* Commercials Section 
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-16">Commercials</h2>
@@ -136,42 +160,54 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Short Films Section */}
       <section className="py-20 bg-[#1a1d24]">
         <div className="container mx-auto px-5">
           <h2 className="text-4xl font-bold mb-16">Short Films</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
             {[
               {
                 title: "Kittu Katha",
-                description: "Graduation Film",
+                description: "Graduation Film- DOP & Colorist",
                 image: "assets/Images/Kittu_Katha.png.PNG",
               },
               {
                 title: "Swecha",
-                description: "Academic Work",
+                description: "Academic Work- DOP & Colorist ",
                 image: "assets/Images/Swechapot.JPG",
               },
               {
                 title: "Jaabu",
-                description: "Short Film",
+                description: "Academic Work- DOP & Colorist ",
                 image: "assets/Images/Jaabu.PNG"
               },
               {
                 title: "Nails",
-                description: "Short Film",
+                description: "Shortfall- Colorist",
                 image: "assets/Images/Nails.PNG",
+              },
+              {
+                title: "Portrait of Chitra",
+                description: "Shortfilm- Colorist",
+                image: "assets/Images/Chitra.png",
+              },
+              {
+                title: "Michael",
+                description: "Shortfilm- Editor & Colorist",
+                image: "/assets/Images/Michael.png",
               }
             ].map((item, index) => (
-              <div key={index} className="aspect-[4/5] bg-gray-800 rounded-lg overflow-hidden group relative">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+              <div key={index} className="group relative">
+                <div className="aspect-[3/4] bg-gray-800 rounded-lg overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+                <div className="mt-4">
                   <h3 className="text-xl font-bold">{item.title}</h3>
                   <p className="text-gray-400">{item.description}</p>
                 </div>
@@ -181,7 +217,30 @@ function App() {
         </div>
       </section>
 
-      {/* Brand Logos Section */}
+      {/* YouTube Link Section */}
+      <section id="youtube-link" className="py-20 bg-[#1a1d24] text-center">
+        <div className="container mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Watch My Showreel</h2>
+          <div className="embed-responsive embed-responsive-16by9 mb-4">
+            <img
+              src="/assets/Images/Showreel-TN.png" // Replace with the actual path to your image
+              alt="Watch My Showreel"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+          <a
+            href="https://youtu.be/MBvsVObj2v0"
+            className="text-lg text-red-500 hover:underline"
+            target="_blank" // Opens the link in a new tab
+            rel="noopener noreferrer" // Security feature to prevent malicious activities
+          >
+            Watch My Showreel on YouTube
+          </a>
+        </div>
+      </section>
+
+
+      {/* Brand Logos Section https://www.youtube.com/embed/MBvsVObj2v0*/}
       <section id="Brands" className="py-20">
         <div className="container mx-auto px-0">
           <h2 className="text-4xl font-bold text-center mb-16">Brands Worked With</h2>
@@ -243,9 +302,9 @@ function App() {
               </ul>
             </div>
 
-            {/* Newsletter */}
-            <div>
-              {/*<h4 className="text-lg font-bold mb-4">Newsletter</h4>
+
+
+            {/*<h4 className="text-lg font-bold mb-4">Newsletter</h4>
               <div className="flex">
                 <input
                   type="email"
@@ -256,18 +315,45 @@ function App() {
                   Subscribe
                 </button>
               </div>*/}
+            {/* Newsletter */}
+            <div>
+              {/* Instagram Section */}
               <h5 className="text-lg font-bold mb-2">Instagram</h5>
-              <div className="flex space-x-4 mt-6">
-                <a href="www.instagram.com" className="text-gray-400 hover:text-red-500">
-                  <Instagram className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-red-500">
-                  <Linkedin className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-red-500">
-                  <Mail className="w-6 h-6" />
-                </a>
-              </div>
+              <a
+                href="https://www.instagram.com/nithin_potharaju"
+                className="text-gray-400 hover:text-red-500"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="w-6 h-6 mr-2 inline-block" />
+                nithin_potharaju
+              </a>
+
+              {/* IMDb Section */}
+              <h5 className="text-lg font-bold mt-6 mb-2">IMDb</h5>
+              <a
+                href="https://m.imdb.com/name/nm15176920/"
+                className="text-gray-400 hover:text-red-500"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/assets/Images/IMDB.png" // Replace with the correct path to your IMDb image
+                  alt="IMDb"
+                  className="w-6 h-6 mr-2 inline-block"
+                />
+                IMDb Profile
+              </a>
+
+              {/* Email Section */}
+              <h5 className="text-lg font-bold mt-6 mb-2">My E-Mail</h5>
+              <a
+                href="mailto:nithincandy3456@gmail.com"
+                className="text-gray-400 hover:text-red-500"
+              >
+                <Mail className="w-6 h-6 mr-2 inline-block" />
+                nithincandy3456@gmail.com
+              </a>
             </div>
           </div>
         </div>
