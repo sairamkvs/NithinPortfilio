@@ -55,7 +55,7 @@ function App() {
           <div className="md:w-1/2 md:pl-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">BIO</h2>
             <p className="text-gray-400">
-              Nithin Potharaju - Cinematographer & Colorist. I’m Nithin Potharaju, a cinematographer and colorist passionate about storytelling through visuals. My journey in the film and television industry has allowed me to work on a diverse range of projects, where I strive to bring a unique aesthetic and creative vision to each endeavor.
+              I’m Nithin Potharaju, a cinematographer and colorist passionate about storytelling through visuals. My journey in the film and television industry has allowed me to work on a diverse range of projects, where I strive to bring a unique aesthetic and creative vision to each endeavor.
               I have had the privilege of collaborating on films like "Pottel," "AAY" and "Maa Nanna Superhero," where I focus on crafting atmospheric moods and visual narratives that resonate with audiences.
               I believe that the magic of filmmaking lies in the details, and I am always eager to experiment with innovative techniques and modern technologies to enhance the storytelling experience.
               When I’m not behind the camera, you can find me exploring new narratives or diving into the world of color grading – always looking for ways to push the boundaries of visual art.
@@ -220,7 +220,7 @@ function App() {
       {/* YouTube Link Section */}
       <section id="youtube-link" className="py-20 bg-[#1a1d24] text-center">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Watch My Showreel</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Showreel 2024</h2>
           <div className="embed-responsive embed-responsive-16by9 mb-4">
             <img
               src="/assets/Images/Showreel-TN.png" // Replace with the actual path to your image
@@ -284,10 +284,10 @@ function App() {
             <div>
               <h4 className="text-lg font-bold mb-4">Movies</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-red-500">Film News</a></li>
-                <li><a href="#" className="hover:text-red-500">Coming Soon</a></li>
-                <li><a href="#" className="hover:text-red-500">Most Popular</a></li>
-                <li><a href="#" className="hover:text-red-500">Top Trailers</a></li>
+                 {/* <li><a href="#" className="hover:text-red-500">Film News</a></li> 
+                 <li><a href="#" className="hover:text-red-500">Coming Soon</a></li>*/}
+                <li><a href="#Films" className="hover:text-red-500">Most Popular</a></li>
+                <li><a href="#home" className="hover:text-red-500">Top Trailers</a></li>
               </ul>
             </div>
 
@@ -295,10 +295,10 @@ function App() {
             <div>
               <h4 className="text-lg font-bold mb-4">Additional Links</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-red-500">About</a></li>
+                <li><a href="#bio" className="hover:text-red-500">About</a></li>
                 <li><a href="#" className="hover:text-red-500">Gallery</a></li>
-                <li><a href="#" className="hover:text-red-500">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-red-500">Contact</a></li>
+                 {/* <li><a href="#" className="hover:text-red-500">Privacy Policy</a></li> */}
+                <li><a href="#ContactUs" className="hover:text-red-500">Contact</a></li>
               </ul>
             </div>
 
@@ -331,7 +331,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Instagram className="w-6 h-6 mr-2 inline-block" />
+                <Instagram className="w-6 h-6 mr-2 inline-block mx-5" />
                 nithin_potharaju
               </a>
 
@@ -343,12 +343,13 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="/assets/Images/IMDB.png" // Replace with the correct path to your IMDb image
-                  alt="IMDb"
-                  className="w-6 h-6 mr-2 inline-block"
-                />
-                IMDb Profile
+              <img
+                src="/assets/Logos/IMDB.png" // Replace with the correct path to your IMDb image
+                alt="IMDb"
+                className="inline-block" // Adjusted class name
+                  style={{ width: '70px', height: '70px' }} // Adjust dimensions as needed
+              />
+              IMDb Profile
               </a>
 
               {/* Email Section */}
@@ -357,8 +358,8 @@ function App() {
                 href="mailto:nithinpotharaju9@gmail.com"
                 className="text-gray-400 hover:text-red-500"
               >
-                <Mail className="w-6 h-6 mr-2 inline-block" />
-                nithincandy3456@gmail.com
+                <Mail className="w-6 h-6 mr-2 inline-block mx-5" />
+                nithinpotharaju9@gmail.com
               </a>
 
 
