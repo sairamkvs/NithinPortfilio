@@ -14,11 +14,11 @@ function App() {
           </div>
           <nav className="flex flex-row space-x-2 md:space-x-8 mt-4 md:mt-0 justify-center md:justify-end">
             <a href="#home" className="hover:text-red-500 transition">Home</a>
-            <a href="#portfolio" className="hover:text-red-500 transition">Bio</a>
+            <a href="#bio" className="hover:text-red-500 transition">Bio</a>
             <a href="#Films" className="hover:text-red-500 transition">Films</a>
             <a href="#Brands" className="hover:text-red-500 transition">Brands</a>
-            <a href="#gallery" className="hover:text-red-500 transition">Gallery</a>
-            <a href="#ContactUS" className="hover:text-red-500 transition">ContactUs</a>
+            {/* Header <a href="#gallery" className="hover:text-red-500 transition">Gallery</a>*/}
+            <a href="#ContactUs" className="hover:text-red-500 transition">ContactUs</a>
           </nav>
         </div>
       </header>
@@ -47,23 +47,23 @@ function App() {
         <div className="container mx-auto px-4 md:flex md:items-center">
           <div className="md:w-1/2">
             <img
-              src="assets/Images/Nithin_Picture.png" // Replace with the actual path to your image
+              src="assets/Images/NITHIN.png" // Replace with the actual path to your image
               alt="Nithin Potharaju"
-              className="w-full h-auto rounded-lg mb-8 md:mb-0"
+              className="w-full h-auto aspect-square object-cover rounded-lg mb-8 md:mb-0"
             />
           </div>
           <div className="md:w-1/2 md:pl-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">BIO</h2>
             <p className="text-gray-400">
-              I’m a freelance Cinematographer & Colourist
-              passionate about film & art. I’m a hands-on
-              professional, able to manage multiple clients,
-              projects, and tasks at the same time, and meet
-              aggressive deadlines.
+              Nithin Potharaju - Cinematographer & Colorist. I’m Nithin Potharaju, a cinematographer and colorist passionate about storytelling through visuals. My journey in the film and television industry has allowed me to work on a diverse range of projects, where I strive to bring a unique aesthetic and creative vision to each endeavor.
+              I have had the privilege of collaborating on films like "Pottel," "AAY" and "Maa Nanna Superhero," where I focus on crafting atmospheric moods and visual narratives that resonate with audiences.
+              I believe that the magic of filmmaking lies in the details, and I am always eager to experiment with innovative techniques and modern technologies to enhance the storytelling experience.
+              When I’m not behind the camera, you can find me exploring new narratives or diving into the world of color grading – always looking for ways to push the boundaries of visual art.
             </p>
           </div>
         </div>
       </section>
+
 
       {/* Main Stream Movies Section */}
       <section id="Films" className="py-20 bg-[#1a1d24]">
@@ -75,7 +75,7 @@ function App() {
             {[
               {
                 title: "POTTEL",
-                role: "Assistant Cinematographer",
+                role: "Associate cinematographer",
                 image: "assets/Images/pottel_movie_poster.png"
               },
               {
@@ -89,7 +89,7 @@ function App() {
                 image: "assets/Images/ma_naana_superhero_poster.jpg",
               },
               {
-                title: "Movie Title 4",
+                title: "Shapadham",
                 role: "Associate Cinematographer",
                 image: "assets/Images/Vyuham_film_poster.jpg",
               },
@@ -271,7 +271,7 @@ function App() {
 
 
       {/* Footer */}
-      <footer className="bg-[#1a1d24] py-20">
+      <footer id="ContactUs" className="bg-[#1a1d24] py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Logo & About */}
@@ -317,6 +317,12 @@ function App() {
               </div>*/}
             {/* Newsletter */}
             <div>
+
+              {/* Mobile Number Section */}
+              <h5 className="text-lg font-bold mt-6 mb-2">Reach me At</h5>
+              <p className="text-gray-400">
+                +91-9059060865 {/* Replace with your actual mobile number */}
+              </p>
               {/* Instagram Section */}
               <h5 className="text-lg font-bold mb-2">Instagram</h5>
               <a
@@ -348,13 +354,16 @@ function App() {
               {/* Email Section */}
               <h5 className="text-lg font-bold mt-6 mb-2">My E-Mail</h5>
               <a
-                href="mailto:nithincandy3456@gmail.com"
+                href="mailto:nithinpotharaju9@gmail.com"
                 className="text-gray-400 hover:text-red-500"
               >
                 <Mail className="w-6 h-6 mr-2 inline-block" />
                 nithincandy3456@gmail.com
               </a>
+
+
             </div>
+
           </div>
         </div>
       </footer>
