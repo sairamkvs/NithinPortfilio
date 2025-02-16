@@ -22,26 +22,6 @@ body {
 }
 
 
-@media (max-width: 768px) {
-  header nav {
-    flex-direction: column; /* Stack links vertically on smaller screens */
-  }
-  #home {
-    padding-top: 12rem;
-    padding-bottom: 10rem;
-  }
-}
-
-@media (max-width: 480px) {
-  header nav {
-    align-items:bottom;
-  }
-  #home {
-    padding-top: 8rem;
-    padding-bottom: 6rem;
-  }
-}
-
 @media (max-width: 480px) {
   header {
     padding-top: 1rem;

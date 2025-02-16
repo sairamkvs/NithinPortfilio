@@ -45,21 +45,20 @@ function App() {
       {/* Bio Section */}
       <section id="bio" className="py-20 bg-[#1a1d24] text-center md:text-left">
         <div className="container mx-auto px-4 md:flex md:items-center">
+          <div className="md:w-1/2 md:pr-10"> {/* Adjusted padding */}
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">BIO</h2>
+            <p className="text-gray-400">
+              I’m Nithin Potharaju, a cinematographer and colorist passionate about storytelling through visuals. My journey in the film and television industry has allowed me to work on a diverse range of projects, where I strive to bring a unique aesthetic and creative vision to each endeavor.
+              I focus on crafting atmospheric moods and visual narratives that resonate with audiences. I believe that the magic of filmmaking lies in the details, and I am always eager to experiment with innovative techniques and modern technologies to enhance the storytelling experience.
+              When I’m not behind the camera, you can find me exploring new narratives or diving into the world of color grading – always looking for ways to push the boundaries of visual art.
+            </p>
+          </div>
           <div className="md:w-1/2">
             <img
               src="assets/Images/NITHIN.png" // Replace with the actual path to your image
               alt="Nithin Potharaju"
               className="w-full h-auto aspect-square object-cover rounded-lg mb-8 md:mb-0"
             />
-          </div>
-          <div className="md:w-1/2 md:pl-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">BIO</h2>
-            <p className="text-gray-400">
-              I’m Nithin Potharaju, a cinematographer and colorist passionate about storytelling through visuals. My journey in the film and television industry has allowed me to work on a diverse range of projects, where I strive to bring a unique aesthetic and creative vision to each endeavor.
-              I have had the privilege of collaborating on films like "Pottel," "AAY" and "Maa Nanna Superhero," where I focus on crafting atmospheric moods and visual narratives that resonate with audiences.
-              I believe that the magic of filmmaking lies in the details, and I am always eager to experiment with innovative techniques and modern technologies to enhance the storytelling experience.
-              When I’m not behind the camera, you can find me exploring new narratives or diving into the world of color grading – always looking for ways to push the boundaries of visual art.
-            </p>
           </div>
         </div>
       </section>
@@ -68,33 +67,33 @@ function App() {
       {/* Main Stream Movies Section */}
       <section id="Films" className="py-20 bg-[#1a1d24]">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-8">Movies</h2>
-          <p className="text-gray-400 mb-12">Feature Films & Major Productions</p>
+          <h2 className="text-4xl font-bold mb-8 text-center">Movies</h2>
+          <p className="text-gray-400 mb-12 text-center">Feature Films & Major Productions</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-center">
             {[
               {
-                title: "POTTEL",
+                title: "POTTEL - 2024",
                 role: "Associate cinematographer",
                 image: "assets/Images/pottel_movie_poster.png"
               },
               {
-                title: "AAY",
+                title: "AAY - 2024",
                 role: "Assistant Cinematographer",
                 image: "assets/Images/aay_movie_poster.jpg",
               },
               {
-                title: "MAA NAANA SUPER HERO",
+                title: "MAA NAANA SUPER HERO - 2024",
                 role: "Assistant Cinematographer",
                 image: "assets/Images/ma_naana_superhero_poster.jpg",
               },
               {
-                title: "Shapadham",
+                title: "Shapadham - 2024",
                 role: "Associate Cinematographer",
                 image: "assets/Images/Vyuham_film_poster.jpg",
               },
               {
-                title: "Yathbhava",
+                title: "Yathbhava - 2024",
                 role: "2nd Unit Cinematographer ",
                 image: "assets/Images/Yathbhava.JPG"
               }
@@ -116,6 +115,7 @@ function App() {
           </div>
         </div>
       </section>
+
 
       {/* Commercials Section 
       <section className="py-20">
@@ -165,8 +165,8 @@ function App() {
       {/* Short Films Section */}
       <section className="py-20 bg-[#1a1d24]">
         <div className="container mx-auto px-5">
-          <h2 className="text-4xl font-bold mb-16">Short Films</h2>
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+          <h2 className="text-4xl font-bold mb-16 text-center">Short Films</h2>
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-8 text-center">
             {[
               {
                 title: "Kittu Katha",
@@ -230,7 +230,7 @@ function App() {
           </div>
           <a
             href="https://youtu.be/MBvsVObj2v0"
-            className="text-lg text-red-500 hover:underline"
+            className="text-lg text-white hover:underline"
             target="_blank" // Opens the link in a new tab
             rel="noopener noreferrer" // Security feature to prevent malicious activities
           >
@@ -243,7 +243,7 @@ function App() {
       {/* Brand Logos Section https://www.youtube.com/embed/MBvsVObj2v0*/}
       <section id="Brands" className="py-20">
         <div className="container mx-auto px-0">
-          <h2 className="text-4xl font-bold text-center mb-16">Brands Worked With</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">In collaboration</h2>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
             {["assets/Logos/Annapurna_college_of_film_&_Media.JPG",
               "/assets/Logos/Annapurna_studios.JPG",
@@ -271,100 +271,74 @@ function App() {
 
 
       {/* Footer */}
-      <footer id="ContactUs" className="bg-[#1a1d24] py-20">
+      <footer id="ContactUs" className="bg-[#1a1d24] py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Logo & About */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold">Nithin Potharaju</h3>
               <p className="text-gray-400">© 2024. All rights reserved.</p>
             </div>
 
-            {/* Movies */}
-            <div>
-              <h4 className="text-lg font-bold mb-4">Movies</h4>
-              <ul className="space-y-2 text-gray-400">
-                 {/* <li><a href="#" className="hover:text-red-500">Film News</a></li> 
-                 <li><a href="#" className="hover:text-red-500">Coming Soon</a></li>*/}
-                <li><a href="#Films" className="hover:text-red-500">Most Popular</a></li>
-                <li><a href="#home" className="hover:text-red-500">Top Trailers</a></li>
-              </ul>
-            </div>
-
             {/* Links */}
             <div>
-              <h4 className="text-lg font-bold mb-4">Additional Links</h4>
+              <h4 className="text-lg font-bold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#bio" className="hover:text-red-500">About</a></li>
-                <li><a href="#" className="hover:text-red-500">Gallery</a></li>
-                 {/* <li><a href="#" className="hover:text-red-500">Privacy Policy</a></li> */}
+                <li><a href="#Films" className="hover:text-red-500">Most Popular</a></li>
+                <li><a href="#home" className="hover:text-red-500">Top Trailers</a></li>
                 <li><a href="#ContactUs" className="hover:text-red-500">Contact</a></li>
               </ul>
             </div>
 
-
-
-            {/*<h4 className="text-lg font-bold mb-4">Newsletter</h4>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Newsletter sign up"
-                  className="bg-gray-800 px-4 py-2 rounded-l-lg focus:outline-none"
-                />
-                <button className="bg-red-500 px-4 py-2 rounded-r-lg hover:bg-red-600">
-                  Subscribe
-                </button>
-              </div>*/}
-            {/* Newsletter */}
+            {/* Contact Info */}
             <div>
+              <h4 className="text-lg font-bold mb-4">Reach Me At</h4>
+              <p className="text-gray-400">+91-9059060865</p>
 
-              {/* Mobile Number Section */}
-              <h5 className="text-lg font-bold mt-6 mb-2">Reach me At</h5>
-              <p className="text-gray-400">
-                +91-9059060865 {/* Replace with your actual mobile number */}
-              </p>
-              {/* Instagram Section */}
-              <h5 className="text-lg font-bold mb-2">Instagram</h5>
-              <a
-                href="https://www.instagram.com/nithin_potharaju"
-                className="text-gray-400 hover:text-red-500"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Instagram className="w-6 h-6 mr-2 inline-block mx-5" />
-                nithin_potharaju
-              </a>
-
-              {/* IMDb Section */}
-              <h5 className="text-lg font-bold mt-6 mb-2">IMDb</h5>
-              <a
-                href="https://m.imdb.com/name/nm15176920/"
-                className="text-gray-400 hover:text-red-500"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-              <img
-                src="/assets/Logos/IMDB.png" // Replace with the correct path to your IMDb image
-                alt="IMDb"
-                className="inline-block" // Adjusted class name
-                  style={{ width: '70px', height: '70px' }} // Adjust dimensions as needed
-              />
-              IMDb Profile
-              </a>
-
-              {/* Email Section */}
-              <h5 className="text-lg font-bold mt-6 mb-2">My E-Mail</h5>
-              <a
-                href="mailto:nithinpotharaju9@gmail.com"
-                className="text-gray-400 hover:text-red-500"
-              >
-                <Mail className="w-6 h-6 mr-2 inline-block mx-5" />
-                nithinpotharaju9@gmail.com
-              </a>
-
-
+              {/* Social Media */}
+              <div className="mt-4 space-y-2">
+                <div>
+                  <h5 className="text-lg font-bold mb-2">Instagram</h5>
+                  <a
+                    href="https://www.instagram.com/nithin_potharaju"
+                    className="text-gray-400 hover:text-red-500"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Instagram className="w-6 h-6 mr-2 inline-block" />
+                    nithin_potharaju
+                  </a>
+                </div>
+                <div>
+                  <h5 className="text-lg font-bold mb-2">IMDb</h5>
+                  <a
+                    href="https://m.imdb.com/name/nm15176920/"
+                    className="text-gray-400 hover:text-red-500"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="/assets/Logos/IMDB.png" // Replace with the correct path to your IMDb image
+                      alt="IMDb"
+                      className="inline-block"
+                      style={{ width: '30px', height: '30px' }}
+                    />
+                    IMDb Profile
+                  </a>
+                </div>
+                <div>
+                  <h5 className="text-lg font-bold mb-2">My E-Mail</h5>
+                  <a
+                    href="mailto:nithinpotharaju9@gmail.com"
+                    className="text-gray-400 hover:text-red-500"
+                  >
+                    <Mail className="w-6 h-6 mr-2 inline-block" />
+                    nithinpotharaju9@gmail.com
+                  </a>
+                </div>
+              </div>
             </div>
-
           </div>
         </div>
       </footer>
