@@ -28,7 +28,7 @@ function App() {
         <div className="absolute inset-0 overflow-hidden z-0">
           <video
             className="absolute w-full h-full object-fit cover"
-            src="assets/video/Showreel.mp4" // Replace with the actual path to your video file
+            src="assets/video/Showreel_Website.mp4" // Replace with the actual path to your video file
             autoPlay
             loop
             muted
@@ -43,11 +43,11 @@ function App() {
       </section>
 
       {/* Bio Section */}
-      <section id="bio" className="py-20 bg-[#1a1d24] text-center md:text-left">
+      <section id="bio" className="py-20 bg-[#1a1d24] ">
         <div className="container mx-auto px-4 md:flex md:items-center">
           <div className="md:w-1/2 md:pr-10"> {/* Adjusted padding */}
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">BIO</h2>
-            <p className="text-gray-400">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">BIO</h2>
+            <p className="text-gray-400 ">
               I’m Nithin Potharaju, a cinematographer and colorist passionate about storytelling through visuals. My journey in the film and television industry has allowed me to work on a diverse range of projects, where I strive to bring a unique aesthetic and creative vision to each endeavor.
               I focus on crafting atmospheric moods and visual narratives that resonate with audiences. I believe that the magic of filmmaking lies in the details, and I am always eager to experiment with innovative techniques and modern technologies to enhance the storytelling experience.
               When I’m not behind the camera, you can find me exploring new narratives or diving into the world of color grading – always looking for ways to push the boundaries of visual art.
@@ -62,13 +62,34 @@ function App() {
           </div>
         </div>
       </section>
-
+      
+      {/* YouTube Link Section */}
+      <section id="youtube-link" className="py-20 bg-[#1a1d24] text-center">
+        <div className="container mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Showreel 2024</h2>
+          <div className="embed-responsive embed-responsive-16by9 mb-4">
+            <img
+              src="/assets/Images/Showreel-TN.png" // Replace with the actual path to your image
+              alt="Watch My Showreel"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+          <a
+            href="https://youtu.be/MBvsVObj2v0"
+            className="text-lg text-white hover:underline"
+            target="_blank" // Opens the link in a new tab
+            rel="noopener noreferrer" // Security feature to prevent malicious activities
+          >
+            Watch My Showreel on YouTube
+          </a>
+        </div>
+      </section>
 
       {/* Main Stream Movies Section */}
       <section id="Films" className="py-20 bg-[#1a1d24]">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-8 text-center">Movies</h2>
-          <p className="text-gray-400 mb-12 text-center">Feature Films & Major Productions</p>
+          <p className="text-gray-400 mb-12 text-xl md:text-2xl text-center">Feature Films & Major Productions</p>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-center">
             {[
@@ -217,27 +238,7 @@ function App() {
         </div>
       </section>
 
-      {/* YouTube Link Section */}
-      <section id="youtube-link" className="py-20 bg-[#1a1d24] text-center">
-        <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Showreel 2024</h2>
-          <div className="embed-responsive embed-responsive-16by9 mb-4">
-            <img
-              src="/assets/Images/Showreel-TN.png" // Replace with the actual path to your image
-              alt="Watch My Showreel"
-              className="w-full h-auto rounded-lg"
-            />
-          </div>
-          <a
-            href="https://youtu.be/MBvsVObj2v0"
-            className="text-lg text-white hover:underline"
-            target="_blank" // Opens the link in a new tab
-            rel="noopener noreferrer" // Security feature to prevent malicious activities
-          >
-            Watch My Showreel on YouTube
-          </a>
-        </div>
-      </section>
+      
 
 
       {/* Brand Logos Section https://www.youtube.com/embed/MBvsVObj2v0*/}
@@ -256,6 +257,7 @@ function App() {
               "assets/Logos/Ather.JPG",
               "/assets/Logos/amazon-prime.avif",
               "/assets/Logos/aha.png",
+              "/assets/Logos/Zee-Cafe.jpg"
             ].map((src, index) => (
               <div key={index} className="w-full h-30 p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
                 <img
