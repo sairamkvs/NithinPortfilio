@@ -128,7 +128,7 @@ function App() {
       {/* YouTube Link Section Try new Working POP-UP*/}
       <section id="youtube-link" className="py-20 bg-[#1a1d24] text-center">
       <div className="container mx-auto">
-        <h2 className="text-1xl md:text-5xl font-bold mb-4">Showreel 2024</h2>
+        <h2 className="text-2xl md:text-2xl font-bold mb-4">Showreel 2024</h2>
 
         {/* Thumbnail with Overlay */}
         <div className="relative inline-block mb-4">
@@ -149,7 +149,7 @@ function App() {
               alt="Play Button"
               className="w-12 h-12 mr-2"
             />
-            <span className="text-3xl font-semibold text-white hover:text-red-500">
+            <span className="text-2xl font-semibold text-white hover:text-red-500">
               Watch My Showreel
             </span>
           </div>
