@@ -128,7 +128,7 @@ function App() {
       {/* YouTube Link Section Try new Working POP-UP*/}
       <section id="youtube-link" className="py-20 bg-[#1a1d24] text-center">
       <div className="container mx-auto">
-        <h2 className="text-2xl md:text-2xl font-bold mb-4">Showreel 2024</h2>
+        <h2 className="text-2xl md:text-2xl font-bold mb-4">ShowReel 2024</h2>
 
         {/* Thumbnail with Overlay */}
         <div className="relative inline-block mb-4">
@@ -141,7 +141,7 @@ function App() {
           />
           {/* Overlay with Play Button and Text */}
           <div
-            className="text-1xl absolute bottom-4 left-0 right-0 flex items-center justify-center cursor-pointer"
+            className="text-1xl absolute bottom-4 left-4 right-4 flex items-left justify-left cursor-pointer"
             onClick={() => setShowModal(true)}
           >
             <img
@@ -149,8 +149,8 @@ function App() {
               alt="Play Button"
               className="w-9 h-9 mr-2"
             />
-            <span className=" font-semibold text-white hover:text-red-500">
-              Watch My Showreel
+            <span className="text-center  font-semibold text-white hover:text-red-500">
+              Watch My ShowReel
             </span>
           </div>
         </div>
