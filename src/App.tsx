@@ -1,8 +1,19 @@
 import React from 'react';
 import { Camera, Play, Film, Mail, Instagram, Linkedin } from 'lucide-react';
+import { useState, useEffect } from 'react';
+
 
 
 function App() {
+  const [showVideo, setShowVideo] = useState(false);
+  useEffect(() => {
+    if (showVideo) {
+      const videoElement = document.getElementById('youtube-video');
+      if (videoElement) {
+        videoElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [showVideo]);
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
@@ -62,8 +73,8 @@ function App() {
           </div>
         </div>
       </section>
-      
-      {/* YouTube Link Section */}
+
+      {/* YouTube Link Section 
       <section id="youtube-link" className="py-20 bg-[#1a1d24] text-center">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Showreel 2024</h2>
@@ -83,62 +94,99 @@ function App() {
             Watch My Showreel on YouTube
           </a>
         </div>
-      </section>
+      </section> */}
 
-      {/* Main Stream Movies Section */}
-      <section id="Films" className="py-20 bg-[#1a1d24]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-8 text-center">Movies</h2>
-          <p className="text-gray-400 mb-12 text-xl md:text-2xl text-center">Feature Films & Major Productions</p>
+      {/* YouTube Link Section */}
+      <section id="youtube-link" className="py-20 bg-[#1a1d24] text-center">
+        <div className="container mx-auto">
+          <h2 className="text-1xl md:text-5xl font-bold mb-4">Showreel 2024</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-center">
-            {[
-              {
-                title: "POTTEL - 2024",
-                role: "Associate cinematographer",
-                image: "assets/Images/pottel_movie_poster.png"
-              },
-              {
-                title: "AAY - 2024",
-                role: "Assistant Cinematographer",
-                image: "assets/Images/aay_movie_poster.jpg",
-              },
-              {
-                title: "MAA NAANA SUPER HERO - 2024",
-                role: "Assistant Cinematographer",
-                image: "assets/Images/ma_naana_superhero_poster.jpg",
-              },
-              {
-                title: "Shapadham - 2024",
-                role: "Associate Cinematographer",
-                image: "assets/Images/Vyuham_film_poster.jpg",
-              },
-              {
-                title: "Yathbhava - 2024",
-                role: "2nd Unit Cinematographer ",
-                image: "assets/Images/Yathbhava.JPG"
-              }
-            ].map((item, index) => (
-              <div key={index} className="group relative">
-                <div className="aspect-[3/4] bg-gray-800 rounded-lg overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                  />
-                </div>
-                <div className="mt-4">
-                  <h3 className="text-xl font-bold">{item.title}</h3>
-                  <p className="text-gray-400">{item.role}</p>
-                </div>
-              </div>
-            ))}
+          {/* Thumbnail with Overlay */}
+          <div className="relative inline-block mb-4">
+            {/* Thumbnail Image */}
+            <img
+              src="assets/Images/Showreel-TN.png" // Update the path accordingly
+              alt="Watch My Showreel"
+              className="w-full h-auto rounded-lg cursor-pointer"
+              onClick={() => window.open('https://www.youtube.com/watch?v=MBvsVObj2v0', 'VideoPlayer', 'width=800,height=600')}
+            />
+            {/* Overlay with Play Button and Text */}
+            <div
+              className="absolute bottom-4 left-0 right-0 flex items-center justify-center"
+              onClick={() => window.open('https://www.youtube.com/watch?v=MBvsVObj2v0', 'VideoPlayer', 'width=800,height=600')}
+            >
+                <img
+                  src="assets/Logos/play-video-white.png" // Update the path accordingly
+                  alt="Play Button"
+                  className="w-12 h-12 mr-2"
+                />
+                <span
+          className="text-3xl font-semibold text-white hover:text-red-500 cursor-pointer"
+        >
+          Watch My Showreel
+        </span>
+            </div>
           </div>
         </div>
       </section>
 
+     
 
-      {/* Commercials Section 
+
+    {/* Main Stream Movies Section */ }
+    < section id = "Films" className = "py-20 bg-[#1a1d24]" >
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold mb-8 text-center">Movies</h2>
+        <p className="text-gray-400 mb-12 text-xl md:text-2xl text-center">Feature Films & Major Productions</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-center">
+          {[
+            {
+              title: "POTTEL - 2024",
+              role: "Associate cinematographer",
+              image: "assets/Images/pottel_movie_poster.png"
+            },
+            {
+              title: "AAY - 2024",
+              role: "Assistant Cinematographer",
+              image: "assets/Images/aay_movie_poster.jpg",
+            },
+            {
+              title: "MAA NAANA SUPER HERO - 2024",
+              role: "Assistant Cinematographer",
+              image: "assets/Images/ma_naana_superhero_poster.jpg",
+            },
+            {
+              title: "Shapadham - 2024",
+              role: "Associate Cinematographer",
+              image: "assets/Images/Vyuham_film_poster.jpg",
+            },
+            {
+              title: "Yathbhava - 2024",
+              role: "2nd Unit Cinematographer ",
+              image: "assets/Images/Yathbhava.JPG"
+            }
+          ].map((item, index) => (
+            <div key={index} className="group relative">
+              <div className="aspect-[3/4] bg-gray-800 rounded-lg overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                />
+              </div>
+              <div className="mt-4">
+                <h3 className="text-xl font-bold">{item.title}</h3>
+                <p className="text-gray-400">{item.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+        </section >
+
+
+  {/* Commercials Section 
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-16">Commercials</h2>
@@ -183,169 +231,169 @@ function App() {
         </div>
       </section>*/}
 
-      {/* Short Films Section */}
-      <section className="py-20 bg-[#1a1d24]">
-        <div className="container mx-auto px-5">
-          <h2 className="text-4xl font-bold mb-16 text-center">Short Films</h2>
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-8 text-center">
-            {[
-              {
-                title: "Kittu Katha",
-                description: "Graduation Film- DOP & Colorist",
-                image: "assets/Images/Kittu_Katha.png.PNG",
-              },
-              {
-                title: "Swecha",
-                description: "Academic Work- DOP & Colorist ",
-                image: "assets/Images/Swechapot.JPG",
-              },
-              {
-                title: "Jaabu",
-                description: "Academic Work- DOP & Colorist ",
-                image: "assets/Images/Jaabu.PNG"
-              },
-              {
-                title: "Nails",
-                description: "Shortfall- Colorist",
-                image: "assets/Images/Nails.PNG",
-              },
-              {
-                title: "Portrait of Chitra",
-                description: "Shortfilm- Colorist",
-                image: "assets/Images/Chitra.png",
-              },
-              {
-                title: "Michael",
-                description: "Shortfilm- Editor & Colorist",
-                image: "/assets/Images/Michael.png",
-              }
-            ].map((item, index) => (
-              <div key={index} className="group relative">
-                <div className="aspect-[3/4] bg-gray-800 rounded-lg overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                  />
-                </div>
-                <div className="mt-4">
-                  <h3 className="text-xl font-bold">{item.title}</h3>
-                  <p className="text-gray-400">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      
-
-
-      {/* Brand Logos Section https://www.youtube.com/embed/MBvsVObj2v0*/}
-      <section id="Brands" className="py-20">
-        <div className="container mx-auto px-0">
-          <h2 className="text-4xl font-bold text-center mb-16">In collaboration</h2>
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
-            {["assets/Logos/Annapurna_college_of_film_&_Media.JPG",
-              "/assets/Logos/Annapurna_studios.JPG",
-              "/assets/Logos/GA2.jpg",
-              "/assets/Logos/UV.jpg",
-              "assets/Logos/Power_Drift.PNG",
-              "assets/Logos/ktm.jpg",
-              "assets/Logos/Hero.jpg",
-              "assets/Logos/Tata_Curve.PNG",
-              "assets/Logos/Ather.JPG",
-              "/assets/Logos/amazon-prime.avif",
-              "/assets/Logos/aha.png",
-              "/assets/Logos/Zee-Cafe.jpg"
-            ].map((src, index) => (
-              <div key={index} className="w-full h-30 p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
-                <img
-                  src={src}
-                  alt={`Brand ${index}`}
-                  className="w-full h-23 object-cover " // Updated height
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-      {/* Footer */}
-      <footer id="ContactUs" className="bg-[#1a1d24] py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Logo & About */}
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold">Nithin Potharaju</h3>
-              <p className="text-gray-400">© 2024. All rights reserved.</p>
+  {/* Short Films Section */ }
+  <section className="py-20 bg-[#1a1d24]">
+    <div className="container mx-auto px-5">
+      <h2 className="text-4xl font-bold mb-16 text-center">Short Films</h2>
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-8 text-center">
+        {[
+          {
+            title: "Kittu Katha",
+            description: "Graduation Film- DOP & Colorist",
+            image: "assets/Images/Kittu_Katha.png.PNG",
+          },
+          {
+            title: "Swecha",
+            description: "Academic Work- DOP & Colorist ",
+            image: "assets/Images/Swechapot.JPG",
+          },
+          {
+            title: "Jaabu",
+            description: "Academic Work- DOP & Colorist ",
+            image: "assets/Images/Jaabu.PNG"
+          },
+          {
+            title: "Nails",
+            description: "Shortfall- Colorist",
+            image: "assets/Images/Nails.PNG",
+          },
+          {
+            title: "Portrait of Chitra",
+            description: "Shortfilm- Colorist",
+            image: "assets/Images/Chitra.png",
+          },
+          {
+            title: "Michael",
+            description: "Shortfilm- Editor & Colorist",
+            image: "/assets/Images/Michael.png",
+          }
+        ].map((item, index) => (
+          <div key={index} className="group relative">
+            <div className="aspect-[3/4] bg-gray-800 rounded-lg overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+              />
             </div>
-
-            {/* Links */}
-            <div>
-              <h4 className="text-lg font-bold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#bio" className="hover:text-red-500">About</a></li>
-                <li><a href="#Films" className="hover:text-red-500">Most Popular</a></li>
-                <li><a href="#home" className="hover:text-red-500">Top Trailers</a></li>
-                <li><a href="#ContactUs" className="hover:text-red-500">Contact</a></li>
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h4 className="text-lg font-bold mb-4">Reach Me At</h4>
-              <p className="text-gray-400">+91-9059060865</p>
-
-              {/* Social Media */}
-              <div className="mt-4 space-y-2">
-                <div>
-                  <h5 className="text-lg font-bold mb-2">Instagram</h5>
-                  <a
-                    href="https://www.instagram.com/nithin_potharaju"
-                    className="text-gray-400 hover:text-red-500"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Instagram className="w-6 h-6 mr-2 inline-block" />
-                    nithin_potharaju
-                  </a>
-                </div>
-                <div>
-                  <h5 className="text-lg font-bold mb-2">IMDb</h5>
-                  <a
-                    href="https://m.imdb.com/name/nm15176920/"
-                    className="text-gray-400 hover:text-red-500"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/assets/Logos/IMDB.png" // Replace with the correct path to your IMDb image
-                      alt="IMDb"
-                      className="inline-block"
-                      style={{ width: '30px', height: '30px' }}
-                    />
-                    IMDb Profile
-                  </a>
-                </div>
-                <div>
-                  <h5 className="text-lg font-bold mb-2">My E-Mail</h5>
-                  <a
-                    href="mailto:nithinpotharaju9@gmail.com"
-                    className="text-gray-400 hover:text-red-500"
-                  >
-                    <Mail className="w-6 h-6 mr-2 inline-block" />
-                    nithinpotharaju9@gmail.com
-                  </a>
-                </div>
-              </div>
+            <div className="mt-4">
+              <h3 className="text-xl font-bold">{item.title}</h3>
+              <p className="text-gray-400">{item.description}</p>
             </div>
           </div>
-        </div>
-      </footer>
+        ))}
+      </div>
     </div>
-  );
+  </section>
+
+
+
+
+  {/* Brand Logos Section https://www.youtube.com/embed/MBvsVObj2v0*/ }
+  <section id="Brands" className="py-20">
+    <div className="container mx-auto px-0">
+      <h2 className="text-4xl font-bold text-center mb-16">In collaboration</h2>
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
+        {["assets/Logos/Annapurna_college_of_film_&_Media.JPG",
+          "/assets/Logos/Annapurna_studios.JPG",
+          "/assets/Logos/GA2.jpg",
+          "/assets/Logos/UV.jpg",
+          "assets/Logos/Power_Drift.PNG",
+          "assets/Logos/ktm.jpg",
+          "assets/Logos/Hero.jpg",
+          "assets/Logos/Tata_Curve.PNG",
+          "assets/Logos/Ather.JPG",
+          "/assets/Logos/amazon-prime.avif",
+          "/assets/Logos/aha.png",
+          "/assets/Logos/Zee-Cafe.jpg"
+        ].map((src, index) => (
+          <div key={index} className="w-full h-30 p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
+            <img
+              src={src}
+              alt={`Brand ${index}`}
+              className="w-full h-23 object-cover " // Updated height
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  {/* Footer */ }
+  <footer id="ContactUs" className="bg-[#1a1d24] py-12">
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Logo & About */}
+        <div className="space-y-4">
+          <h3 className="text-2xl font-bold">Nithin Potharaju</h3>
+          <p className="text-gray-400">© 2024. All rights reserved.</p>
+        </div>
+
+        {/* Links */}
+        <div>
+          <h4 className="text-lg font-bold mb-4">Quick Links</h4>
+          <ul className="space-y-2 text-gray-400">
+            <li><a href="#bio" className="hover:text-red-500">About</a></li>
+            <li><a href="#Films" className="hover:text-red-500">Most Popular</a></li>
+            <li><a href="#home" className="hover:text-red-500">Top Trailers</a></li>
+            <li><a href="#ContactUs" className="hover:text-red-500">Contact</a></li>
+          </ul>
+        </div>
+
+        {/* Contact Info */}
+        <div>
+          <h4 className="text-lg font-bold mb-4">Reach Me At</h4>
+          <p className="text-gray-400">+91-9059060865</p>
+
+          {/* Social Media */}
+          <div className="mt-4 space-y-2">
+            <div>
+              <h5 className="text-lg font-bold mb-2">Instagram</h5>
+              <a
+                href="https://www.instagram.com/nithin_potharaju"
+                className="text-gray-400 hover:text-red-500"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="w-6 h-6 mr-2 inline-block" />
+                nithin_potharaju
+              </a>
+            </div>
+            <div>
+              <h5 className="text-lg font-bold mb-2">IMDb</h5>
+              <a
+                href="https://m.imdb.com/name/nm15176920/"
+                className="text-gray-400 hover:text-red-500"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/assets/Logos/IMDB.png" // Replace with the correct path to your IMDb image
+                  alt="IMDb"
+                  className="inline-block"
+                  style={{ width: '30px', height: '30px' }}
+                />
+                IMDb Profile
+              </a>
+            </div>
+            <div>
+              <h5 className="text-lg font-bold mb-2">My E-Mail</h5>
+              <a
+                href="mailto:nithinpotharaju9@gmail.com"
+                className="text-gray-400 hover:text-red-500"
+              >
+                <Mail className="w-6 h-6 mr-2 inline-block" />
+                nithinpotharaju9@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+      </div >
+      );
 }
 
 export default App;
