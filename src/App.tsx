@@ -5,15 +5,9 @@ import { useState, useEffect } from 'react';
 
 
 function App() {
-  const [showVideo, setShowVideo] = useState(false);
-  useEffect(() => {
-    if (showVideo) {
-      const videoElement = document.getElementById('youtube-video');
-      if (videoElement) {
-        videoElement.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [showVideo]);
+  
+    const [showModal, setShowModal] = useState(false);
+ 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
@@ -96,21 +90,21 @@ function App() {
         </div>
       </section> */}
 
-      {/* YouTube Link Section */}
+      {/* YouTube Link Section working Real
       <section id="youtube-link" className="py-20 bg-[#1a1d24] text-center">
         <div className="container mx-auto">
           <h2 className="text-1xl md:text-5xl font-bold mb-4">Showreel 2024</h2>
 
-          {/* Thumbnail with Overlay */}
+          {/* Thumbnail with Overlay 
           <div className="relative inline-block mb-4">
-            {/* Thumbnail Image */}
+            {/* Thumbnail Image 
             <img
               src="assets/Images/Showreel-TN.png" // Update the path accordingly
               alt="Watch My Showreel"
               className="w-full h-auto rounded-lg cursor-pointer"
               onClick={() => window.open('https://www.youtube.com/watch?v=MBvsVObj2v0', 'VideoPlayer', 'width=800,height=600')}
             />
-            {/* Overlay with Play Button and Text */}
+            {/* Overlay with Play Button and Text 
             <div
               className="absolute bottom-4 left-0 right-0 flex items-center justify-center"
               onClick={() => window.open('https://www.youtube.com/watch?v=MBvsVObj2v0', 'VideoPlayer', 'width=800,height=600')}
@@ -128,9 +122,63 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section>* /}
+      
 
-     
+      {/* YouTube Link Section Try new Working POP-UP*/}
+      <section id="youtube-link" className="py-20 bg-[#1a1d24] text-center">
+      <div className="container mx-auto">
+        <h2 className="text-1xl md:text-5xl font-bold mb-4">Showreel 2024</h2>
+
+        {/* Thumbnail with Overlay */}
+        <div className="relative inline-block mb-4">
+          {/* Thumbnail Image */}
+          <img
+            src="assets/Images/Showreel-TN.png"
+            alt="Watch My Showreel"
+            className="w-full h-auto rounded-lg cursor-pointer"
+            onClick={() => setShowModal(true)}
+          />
+          {/* Overlay with Play Button and Text */}
+          <div
+            className="absolute bottom-4 left-0 right-0 flex items-center justify-center cursor-pointer"
+            onClick={() => setShowModal(true)}
+          >
+            <img
+              src="assets/Logos/play-video-white.png"
+              alt="Play Button"
+              className="w-12 h-12 mr-2"
+            />
+            <span className="text-3xl font-semibold text-white hover:text-red-500">
+              Watch My Showreel
+            </span>
+          </div>
+        </div>
+
+        {/* Modal for Video */}
+        {showModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+            <div className="relative bg-black p-4 rounded-lg w-full max-w-2xl">
+              <button
+                className="absolute top-2 right-2 text-white text-3xl"
+                onClick={() => setShowModal(false)}
+              >
+                &times;
+              </button>
+              <iframe
+                width="100%"
+                height="400"
+                src="https://www.youtube.com/embed/MBvsVObj2v0?autoplay=1"
+                title="YouTube video player"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                className="rounded-lg"
+              ></iframe>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
 
 
     {/* Main Stream Movies Section */ }
