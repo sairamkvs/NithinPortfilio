@@ -141,15 +141,15 @@ function App() {
           />
           {/* Overlay with Play Button and Text */}
           <div
-            className="absolute bottom-4 left-0 right-0 flex items-center justify-center cursor-pointer"
+            className="text-1xl absolute bottom-4 left-0 right-0 flex items-center justify-center cursor-pointer"
             onClick={() => setShowModal(true)}
           >
             <img
               src="assets/Logos/play-video-white.png"
               alt="Play Button"
-              className="w-12 h-12 mr-2"
+              className="w-9 h-9 mr-2"
             />
-            <span className="text-2xl font-semibold text-white hover:text-red-500">
+            <span className=" font-semibold text-white hover:text-red-500">
               Watch My Showreel
             </span>
           </div>
