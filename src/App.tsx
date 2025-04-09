@@ -302,7 +302,7 @@ function App() {
           },
           {
             title: "Nails",
-            description: "Shortfall- Colorist",
+            description: "Shortfilm- Colorist",
             image: "assets/Images/Nails.PNG",
           },
           {
